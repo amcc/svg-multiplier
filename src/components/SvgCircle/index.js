@@ -18,21 +18,21 @@ const SvgCircle = ({ n }) => {
             <g className={styles.red}>
               <circle
                 className={`${styles.redCircle} ${styles.circle}`}
-                cx="285"
+                cx="295"
                 cy="250"
-                r="200"
+                r="170"
                 // fill="#FF0000"
-                // shapeRendering="crispEdges"
+                shapeRendering="crispEdges"
               />
             </g>
             <g className={styles.green}>
               <circle
                 className={`${styles.greenCircle} ${styles.circle}`}
-                cx="265"
+                cx="365"
                 cy="250"
-                r="100"
+                r="150"
                 // fill="#00FF00"
-                // shapeRendering="crispEdges"
+                shapeRendering="crispEdges"
               />
             </g>
             <g className={styles.blue}>
@@ -40,9 +40,19 @@ const SvgCircle = ({ n }) => {
                 className={`${styles.blueCircle} ${styles.circle}`}
                 cx="295"
                 cy="250"
-                r="200"
+                r="180"
                 // fill="#0000FF"
-                // shapeRendering="crispEdges"
+                shapeRendering="crispEdges"
+              />
+            </g>
+            <g className={styles.black}>
+              <circle
+                className={`${styles.blackCircle} ${styles.circle}`}
+                cx="365"
+                cy="250"
+                r="130"
+                // fill="#0000FF"
+                shapeRendering="crispEdges"
               />
             </g>
           </g>

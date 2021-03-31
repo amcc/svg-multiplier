@@ -49,13 +49,14 @@
   }
   .red,
   .green,
-  .blue {
+  .blue,
+  .black {
     opacity: 1;
     /* animation-name: fader; */
     animation-timing-function: ease-in-out;
     animation-direction: alternate-reverse;
     animation-iteration-count: 2;
-    mix-blend-mode: screen;
+    mix-blend-mode: exclusion;
   }
   .red {
     animation-duration: var(--rotspd);
@@ -66,17 +67,24 @@
   .blue {
     animation-duration: calc(var(--rotspd) + var(--rotstagger) * 3.1);
   }
+  .black {
+    animation-duration: calc(var(--rotspd) + var(--rotstagger) * 7.1);
+  }
   .red-circle {
     animation-duration: var(--rotspd);
     fill: white;
   }
   .green-circle {
     animation-duration: calc(var(--rotspd) + var(--rotstagger) * 1.31);
-    fill: white;
+    fill: black;
   }
   .blue-circle {
     animation-duration: calc(var(--rotspd) + var(--rotstagger) * 2.1);
     fill: black;
+  }
+  .black-circle {
+    animation-duration: calc(var(--rotspd) + var(--rotstagger) * 4.1);
+    fill: white;
   }
   .red {
     transform-origin: 50% 50%;
@@ -89,6 +97,10 @@
   .blue {
     transform-origin: 50% 50%;
     transform: rotate(240deg);
+  }
+  .blue {
+    transform-origin: 50% 50%;
+    transform: rotate(290deg);
   }
   .red,
   .red-circle {
