@@ -15,4 +15,4 @@
     npm init gatsby
     ```
 
-    otherwise clone the repo and have a play
+    <!-- otherwise clone the repo and have a play -->
