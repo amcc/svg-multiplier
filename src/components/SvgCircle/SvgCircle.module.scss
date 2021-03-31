@@ -1,0 +1,120 @@
+:root {
+  --rotspd: 3s;
+  --rotstagger: 0.13s;
+}
+.svg-circle {
+  svg {
+    animation: wobble 1s 1;
+  }
+
+  @keyframes wobble {
+    25% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(-30deg);
+    }
+    75% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+    transform: translate3d(0, 0, 0);
+    transform-origin: 50% 50%;
+    // animation-name: rotator;
+    // animation-timing-function: ease-in-out;
+    // animation-direction: reverse;
+    // animation-iteration-count: 2;
+    // animation-duration: calc(var(--rotspd) * 7.1);
+
+    animation: rotator calc(var(--rotspd) * 7.1) alternate-reverse infinite
+      ease-in-out;
+    // animation-delay: calc(var(--order) * 1s);
+  }
+  .isolate {
+    isolation: isolate; /* Without isolation, the background color will be taken into account */
+    position: relative;
+  }
+  .container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    // height: 100vh;
+  }
+  .red,
+  .green,
+  .blue {
+    opacity: 1;
+    /* animation-name: fader; */
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: 2;
+    mix-blend-mode: screen;
+  }
+  .red {
+    animation-duration: var(--rotspd);
+  }
+  .green {
+    animation-duration: calc(var(--rotspd) + var(--rotstagger) * 1.37);
+  }
+  .blue {
+    animation-duration: calc(var(--rotspd) + var(--rotstagger) * 3.1);
+  }
+  .red-circle {
+    animation-duration: var(--rotspd);
+  }
+  .green-circle {
+    animation-duration: calc(var(--rotspd) + var(--rotstagger) * 1.31);
+  }
+  .blue-circle {
+    animation-duration: calc(var(--rotspd) + var(--rotstagger) * 2.1);
+  }
+  .red {
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+  .green {
+    transform-origin: 50% 50%;
+    transform: rotate(120deg);
+  }
+  .blue {
+    transform-origin: 50% 50%;
+    transform: rotate(240deg);
+  }
+  .red,
+  .red-circle {
+  }
+  .blue,
+  .blue-circle {
+    animation-delay: calc(var(--rotspd) * var(--rotstagger) * 1);
+  }
+  .green,
+  .green-circle {
+    animation-delay: calc(var(--rotspd) * var(--rotstagger) * 2);
+  }
+}
+.circle {
+  transform-origin: 50% 50%;
+
+  //   animation: wobble 1s 1;
+  animation: rotator;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+
+  animation-delay: calc(var(--order) * 100ms);
+}
+@keyframes rotator {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
