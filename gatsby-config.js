@@ -3,7 +3,15 @@ module.exports = {
     title: "SVG-multiplier",
   },
   plugins: [
-    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        // additionalData: '@import "utilities";',
+        sassOptions: {
+          includePaths: ["./src/styles"],
+        },
+      },
+    },
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-react-helmet",
     {

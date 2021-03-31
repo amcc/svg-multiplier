@@ -1,5 +1,5 @@
 :root {
-  --rotspd: 3s;
+  --rotspd: 6s;
   --rotstagger: 0.13s;
 }
 .svg-circle {
@@ -68,12 +68,15 @@
   }
   .red-circle {
     animation-duration: var(--rotspd);
+    fill: white;
   }
   .green-circle {
     animation-duration: calc(var(--rotspd) + var(--rotstagger) * 1.31);
+    fill: white;
   }
   .blue-circle {
     animation-duration: calc(var(--rotspd) + var(--rotstagger) * 2.1);
+    fill: black;
   }
   .red {
     transform-origin: 50% 50%;
@@ -108,7 +111,7 @@
   animation-direction: alternate-reverse;
   animation-iteration-count: infinite;
 
-  animation-delay: calc(var(--order) * 100ms);
+  animation-delay: calc(var(--order) * 40ms);
 }
 @keyframes rotator {
   from {

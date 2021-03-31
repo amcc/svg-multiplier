@@ -12,7 +12,11 @@ const SvgLayout = ({ n }) => {
     return elements;
   };
 
-  return <div className={styles.svgLayout}>{createElements(n)}</div>;
+  return (
+    <div className={styles.outer}>
+      <div className={styles.inner}>{createElements(n)}</div>
+    </div>
+  );
 };
 
 export { SvgLayout };

@@ -21,7 +21,7 @@ const SvgCircle = ({ n }) => {
                 cx="285"
                 cy="250"
                 r="200"
-                fill="#FF0000"
+                // fill="#FF0000"
                 // shapeRendering="crispEdges"
               />
             </g>
@@ -30,8 +30,8 @@ const SvgCircle = ({ n }) => {
                 className={`${styles.greenCircle} ${styles.circle}`}
                 cx="265"
                 cy="250"
-                r="200"
-                fill="#00FF00"
+                r="100"
+                // fill="#00FF00"
                 // shapeRendering="crispEdges"
               />
             </g>
@@ -41,7 +41,7 @@ const SvgCircle = ({ n }) => {
                 cx="295"
                 cy="250"
                 r="200"
-                fill="#0000FF"
+                // fill="#0000FF"
                 // shapeRendering="crispEdges"
               />
             </g>
